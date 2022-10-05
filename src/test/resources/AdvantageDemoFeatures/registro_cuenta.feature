@@ -1,8 +1,6 @@
 #Author: diego.arboledabr@gmail.com
 
 
-
-
 Feature: Registro de cuenta nueva en el sitio web "advantageonlineshopping.com/"
   Yo como un cliente potencial requiero registrarme en el sitio web de "advantageonlineshopping.com/" para poder realizar mis compras.
 

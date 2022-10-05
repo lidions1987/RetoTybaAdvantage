@@ -1,26 +1,43 @@
 package AdvantageDemoStepDefinition;
 
+import org.openqa.selenium.WebDriver;
+
+import AdvantageDemoTasks.IngresarIconoLogin;
+import AdvantageDemoTasks.IngresrCreacionCuenta;
+import AdvantageDemoTasks.OpenTheBrowser;
+import AdvantageDemoUtils.Constantes;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 
 public class RegistroCuentaStepDefinitions {
 	
+	private WebDriver herBrowser;
+	private Actor usuario = Actor.named("usuario");
+	private Constantes url;
+	@Before
+	public void setup(){
+		usuario.can(BrowseTheWeb.with(herBrowser));
+		
+	}
 	@Given("que me encuentro en el sitio web advantageonlineshopping.com\\/")
 	public void que_me_encuentro_en_el_sitio_web_advantageonlineshopping_com() {
-	    
+	    usuario.wasAbleTo(OpenTheBrowser.at(url));
 	    
 	}
 
 	@When("le doy click al incono de user")
 	public void le_doy_click_al_incono_de_user() {
-	 
+	   usuario.attemptsTo(IngresarIconoLogin.ingreso());
 
 	}
 
 	@When("luego click en la opcion de create new account")
 	public void luego_click_en_la_opcion_de_create_new_account() {
-	    
+	    usuario.attemptsTo(IngresrCreacionCuenta.crear());
 	    
 	}
 

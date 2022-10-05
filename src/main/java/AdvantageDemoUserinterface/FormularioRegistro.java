@@ -23,7 +23,8 @@ public class FormularioRegistro {
 	public static final Target CHECKPROMOTION = Target.the("Check para marcar si el usuario desea recibir promociones").located(By.xpath("//input[@name='allowOffersPromotion']"));
 	public static final Target CHEKCAGREE = Target.the("Check para marcar si el usuario esta de acuerdo con los terminos y condiciones").located(By.xpath("//input[@name='i_agree']"));
 	public static final Target BTNREGISTER = Target.the("Boton para registrar la cuenta").located(By.xpath("//button[@id='register_btnundefined']"));
-	
+	public static final Target ICONUSER = Target.the("Icono de ingreso a login o creación de cuenta").located(By.xpath("//a[@id='hrefUserIcon']"));
+	public static final Target LBLCREATEACCOUNT = Target.the("label donde se encuentra crear cuenta").located(By.xpath("//a[@translate='CREATE_NEW_ACCOUNT']"));
 }
 
 
