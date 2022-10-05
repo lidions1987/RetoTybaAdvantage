@@ -18,5 +18,6 @@ public class SeleccionProducto {
 	public static final Target LBLCOLORGRAY = Target.the("Selección del color girs del producto").located(By.xpath("//span[@title='GRAY']"));
 	public static final Target LBLQUATITYMINUS = Target.the("Disminuir cantidad").located(By.xpath("//div[@class='minus']"));
 	public static final Target LBLQUATITYPLUS = Target.the("Maximizar candtidad").located(By.xpath("//div[@class='plus']"));
+	
 
 }
